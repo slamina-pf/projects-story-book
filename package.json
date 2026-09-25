@@ -1,8 +1,10 @@
 {
   "name": "@slamina-pf/projects-story-book",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -14,7 +16,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./styles.css": "./dist/projects-story-book.css"
   },
   "scripts": {
     "dev": "vite",
