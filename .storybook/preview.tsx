@@ -1,6 +1,15 @@
 import type { Preview } from '@storybook/react-vite'
+import '../src/styles/tailwind.css'
+import { ThemeProvider } from '../src/theme/ThemeProvider'
 
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <ThemeProvider>
+        <Story />
+      </ThemeProvider>
+    )
+  ],
   parameters: {
     controls: {
       matchers: {

@@ -2,6 +2,7 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 import path from 'node:path';
@@ -14,6 +15,7 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     dts({
       tsconfigPath: path.resolve(dirname, 'tsconfig.app.json'),
       include: ['src'],
